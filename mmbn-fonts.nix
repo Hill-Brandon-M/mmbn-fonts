@@ -27,7 +27,7 @@ let
     dontUnpack = true;
     installPhase = ''
       mkdir -p $out/share/fonts/truetype
-      cp ${fontPath} $out/share/fonts/truetype
+      install -Dm644 ${fontPath} $out/share/fonts/truetype
     '';
   };
 
