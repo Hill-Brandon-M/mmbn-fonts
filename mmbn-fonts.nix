@@ -26,8 +26,11 @@ let
     src = fontPath;
     dontUnpack = true;
     installPhase = ''
-      mkdir -p $out/share/fonts/truetype
+      runHook preInstall
+      
       install -Dm644 ${fontPath} $out/share/fonts/truetype
+
+      runHook postInstall
     '';
   };
 
