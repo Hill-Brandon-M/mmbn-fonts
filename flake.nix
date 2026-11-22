@@ -32,6 +32,5 @@
         ${pname} = pkgsBySystem.${system}.${pname};
         default = pkgsBySystem.${system}.${pname};
       });
-      # packages.${system} = pkgs.callPackage ./mmbn-fonts.nix { };
     };
 }
