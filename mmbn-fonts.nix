@@ -28,7 +28,7 @@ let
     installPhase = ''
       runHook preInstall
       
-      install -Dm644 ${fontPath} $out/share/fonts/truetype
+      install -Dm644 ${fontPath} $out/share/fonts/truetype/${pkgName}
 
       runHook postInstall
     '';
