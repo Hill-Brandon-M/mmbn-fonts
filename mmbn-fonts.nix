@@ -20,7 +20,7 @@ let
   mkFontPkg = file: let
     pkgName = makeName file;
     fontPath = file;
-  in pkgs.stdenv.mkDerivation {
+  in pkgs.stdenvNoCC.mkDerivation {
     pname = "mmbn-font-${pkgName}";
     version = "1.0";
     src = fontPath;
